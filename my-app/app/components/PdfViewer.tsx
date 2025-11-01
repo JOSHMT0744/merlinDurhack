@@ -22,8 +22,8 @@ import { Sidebar } from "./Sidebar";
 import { Spinner } from "./Spinner";
 import { testHighlights as _testHighlights } from "./test-highlights";
 
-//import "./style/App.css";
-//import "../../dist/style.css"; 
+import "./style/PdfViewer.css";
+//import "../../dist/PdfViewer.css"; 
 
 
 const testHighlights: Record<string, Array<IHighlight>> = _testHighlights;
@@ -52,8 +52,8 @@ const PRIMARY_PDF_URL = "https://arxiv.org/pdf/1708.08021";
 const SECONDARY_PDF_URL = "https://arxiv.org/pdf/1604.02480";
 
 export function PdfViewer() {
-  const searchParams = new URLSearchParams(document.location.search);
-  const initialUrl = searchParams.get("url") || PRIMARY_PDF_URL;
+  //const searchParams = new URLSearchParams(document.location.search);
+  const initialUrl = PRIMARY_PDF_URL; //searchParams.get("url") || 
 
   const [url, setUrl] = useState(initialUrl);
   const [highlights, setHighlights] = useState<Array<IHighlight>>(

@@ -10,8 +10,6 @@ const updateHash = (highlight: IHighlight) => {
   document.location.hash = `highlight-${highlight.id}`;
 };
 
-declare const APP_VERSION: string;
-
 export function Sidebar({
   highlights,
   toggleDocument,
@@ -21,7 +19,7 @@ export function Sidebar({
     <div className="sidebar" style={{ width: "25vw" }}>
       <div className="description" style={{ padding: "1rem" }}>
         <h2 style={{ marginBottom: "1rem" }}>
-          react-pdf-highlighter {APP_VERSION}
+          react-pdf-highlighter
         </h2>
 
         <p style={{ fontSize: "0.7rem" }}>
